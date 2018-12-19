@@ -5,6 +5,7 @@ const rl = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout
 });
+const childProcess = require('child_process');
 
 const convertDecToHex = (colors) => {
     let hex = '#';
@@ -17,7 +18,13 @@ const convertDecToHex = (colors) => {
                 .toUpperCase();
         }
     });
-    console.log(hex);
+
+    const proc = childProcess.spawn('pbcopy');
+    proc.stdin.write(hex);
+    proc.stdin.end();
+    console.log(
+        `\nResult(${hex}) is copied to clipboard, Use the result directly by [Ctrl + v]\n`
+    );
 };
 
 rl.question("Put a decimals separated with '-' or ',': ", (decimals) => {
