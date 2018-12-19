@@ -1,0 +1,22 @@
+{
+    "name": "color_converter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "start": "node ./src/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hansol-yang/ColorConverter.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hansol-yang/ColorConverter/issues"
+    },
+    "homepage": "https://github.com/hansol-yang/ColorConverter#readme"
+}
